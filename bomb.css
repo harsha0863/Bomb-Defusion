@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Monoton&family=Open+Sans:wght@400;700&family=Playfair+Display+SC:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Source+Sans+Pro:wght@400;700&family=Work+Sans:wght@400;700&display=swap");
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #000;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.timer-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 2s ease-in-out;
+  color: #fff;
+}
+
+.question {
+  font-size: 28px;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.user-input {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: 2px solid #0f0;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: transparent;
+  color: #0f0;
+  animation: glow 1.5s infinite alternate;
+  outline: none;
+}
+
+.timer-display {
+  font-size: 60px;
+  color: #ff4444;
+  text-shadow: 0 0 10px red;
+  margin-top: 30px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.bomb-image {
+  width: 150px;
+  margin-top: 40px;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px #0f0;
+  }
+  to {
+    box-shadow: 0 0 20px #0f0;
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
